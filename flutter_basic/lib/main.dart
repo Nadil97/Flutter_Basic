@@ -44,6 +44,10 @@ class MyHomepage extends StatelessWidget {
             onPressed: (() {}),
           )
         ],
+        flexibleSpace: Image.asset(
+          'assets/back.jpg',
+          fit: BoxFit.cover,
+        ),
       ),
     );
   }
