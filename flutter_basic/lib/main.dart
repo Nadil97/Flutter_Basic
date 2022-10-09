@@ -30,6 +30,10 @@ class MyHomepage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("Demmo app"),
+        leading: IconButton(
+          icon: Icon(Icons.menu),
+          onPressed: (() {}),
+        ),
       ),
     );
   }
