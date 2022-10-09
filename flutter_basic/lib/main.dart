@@ -1,21 +1,35 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:device_preview/device_preview.dart';
 
-void main() {
-  runApp(MyApp());
-}
+void main() => runApp(
+      DevicePreview(
+        enabled: !kReleaseMode,
+        builder: (context) => MyApp(), // Wrap your app
+      ),
+    );
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text("Nadil App"),
-        ),
-        body: Center(
-          child: Text("Hello world",style: TextStyle(fontSize: 50.0),),
-          
-        ),
+      locale: DevicePreview.locale(context),
+      builder: DevicePreview.appBuilder,
+      title: "Flutter demo",
+      theme: ThemeData(primarySwatch: Colors.blue),
+      home: const MyHomepage(),
+    );
+  }
+}
+
+class MyHomepage extends StatelessWidget {
+  const MyHomepage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Demmo app"),
       ),
     );
   }
