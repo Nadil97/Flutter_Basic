@@ -12,6 +12,10 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text("Nadil App"),
         ),
+        body: Center(
+          child: Text("Hello world",style: TextStyle(fontSize: 50.0),),
+          
+        ),
       ),
     );
   }
