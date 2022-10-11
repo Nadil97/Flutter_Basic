@@ -48,6 +48,10 @@ class MyHomepage extends StatelessWidget {
           'assets/back.jpg',
           fit: BoxFit.cover,
         ),
+        bottom: PreferredSize(
+          child: Container(),
+          preferredSize: Size.fromHeight(70),
+        ),
       ),
     );
   }
