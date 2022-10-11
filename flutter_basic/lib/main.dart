@@ -27,31 +27,44 @@ class MyHomepage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Demmo app"),
-        leading: IconButton(
-          icon: Icon(Icons.menu),
-          onPressed: (() {}),
-        ),
-        actions: <Widget>[
-          IconButton(
-            icon: Icon(Icons.search),
+    return DefaultTabController(
+      length: 3,
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text("Demmo app"),
+          leading: IconButton(
+            icon: Icon(Icons.menu),
             onPressed: (() {}),
           ),
-          IconButton(
-            icon: Icon(Icons.more_vert),
-            onPressed: (() {}),
-          )
-        ],
-        flexibleSpace: Image.asset(
-          'assets/back.jpg',
-          fit: BoxFit.cover,
+          actions: <Widget>[
+            IconButton(
+              icon: Icon(Icons.search),
+              onPressed: (() {}),
+            ),
+            IconButton(
+              icon: Icon(Icons.more_vert),
+              onPressed: (() {}),
+            )
+          ],
+          flexibleSpace: Image.asset(
+            'assets/back.jpg',
+            fit: BoxFit.cover,
+          ),
+          bottom: const TabBar(
+            tabs: [
+              Tab(icon: Icon(Icons.directions_car)),
+              Tab(icon: Icon(Icons.directions_transit)),
+              Tab(icon: Icon(Icons.directions_bike)),
+            ],
+          ),
         ),
-        bottom: PreferredSize(
-          child: Container(),
-          preferredSize: Size.fromHeight(70),
-        ),
+        body: const TabBarView(
+            children: [
+              Icon(Icons.directions_car),
+              Icon(Icons.directions_transit),
+              Icon(Icons.directions_bike),
+            ],
+          ),
       ),
     );
   }
