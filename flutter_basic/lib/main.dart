@@ -49,10 +49,10 @@ class MyHomepage extends StatelessWidget {
               onPressed: (() {}),
             )
           ],
-          flexibleSpace: Image.asset(
-            'assets/back.jpg',
-            fit: BoxFit.cover,
-          ),
+          // flexibleSpace: Image.asset(
+          //   'assets/back.jpg',
+          //   fit: BoxFit.cover,
+          // ),
           bottom: const TabBar(
             tabs: [
               Tab(
@@ -64,6 +64,7 @@ class MyHomepage extends StatelessWidget {
             ],
           ),
           elevation: 22.0,
+          backgroundColor: Colors.blueGrey,
         ),
         body: const TabBarView(
           children: [
