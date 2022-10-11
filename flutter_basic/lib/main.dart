@@ -63,6 +63,7 @@ class MyHomepage extends StatelessWidget {
               Tab(icon: Icon(Icons.directions_bike)),
             ],
           ),
+          elevation: 22.0,
         ),
         body: const TabBarView(
           children: [
