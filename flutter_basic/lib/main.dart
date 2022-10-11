@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_unnecessary_containers
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:device_preview/device_preview.dart';
@@ -27,22 +29,23 @@ class MyHomepage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var tab12 = tab1();
     return DefaultTabController(
       length: 3,
       child: Scaffold(
         appBar: AppBar(
-          title: Text("Demmo app"),
+          title: const Text("Demmo app"),
           leading: IconButton(
-            icon: Icon(Icons.menu),
+            icon: const Icon(Icons.menu),
             onPressed: (() {}),
           ),
           actions: <Widget>[
             IconButton(
-              icon: Icon(Icons.search),
+              icon: const Icon(Icons.search),
               onPressed: (() {}),
             ),
             IconButton(
-              icon: Icon(Icons.more_vert),
+              icon: const Icon(Icons.more_vert),
               onPressed: (() {}),
             )
           ],
@@ -52,20 +55,29 @@ class MyHomepage extends StatelessWidget {
           ),
           bottom: const TabBar(
             tabs: [
-              Tab(icon: Icon(Icons.directions_car)),
+              Tab(
+                icon: Icon(Icons.directions_car),
+                text: 'Car',
+              ),
               Tab(icon: Icon(Icons.directions_transit)),
               Tab(icon: Icon(Icons.directions_bike)),
             ],
           ),
         ),
         body: const TabBarView(
-            children: [
-              Icon(Icons.directions_car),
-              Icon(Icons.directions_transit),
-              Icon(Icons.directions_bike),
-            ],
-          ),
+          children: [
+            Icon(Icons.directions_car),
+            Icon(Icons.directions_transit),
+            Icon(Icons.directions_bike),
+          ],
+        ),
       ),
     );
   }
+}
+
+Widget tab1() {
+  return Container(
+    child: const Center(child: Text("First tab")),
+  );
 }
