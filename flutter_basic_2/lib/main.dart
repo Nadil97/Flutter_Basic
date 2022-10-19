@@ -39,7 +39,18 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text("Flutter project 2"),
       ),
-      body: Container(),
+      body: Container(
+        height: 200.0,
+        width: 200.0,
+        color: Colors.pink,
+        // ignore: prefer_const_constructors
+        child: Text(
+          "Chek colors",
+          style: TextStyle(
+            fontSize: 20.0,
+          ),
+        ),
+      ),
     );
   }
 }
