@@ -41,6 +41,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Container(
         margin: EdgeInsets.all(20.0),
+        padding: EdgeInsets.all(50.0 ),
         height: 200.0,
         width: double.infinity,
         color: Colors.pink,
