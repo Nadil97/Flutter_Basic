@@ -25,6 +25,18 @@ class Homepage extends StatelessWidget {
       appBar: AppBar(
         title: Text("Project 3"),
       ),
+      body: Center(
+        child: Column(children: [
+          Text(
+            "You have pushed button time",
+            style: TextStyle(fontSize: 25.0),
+          ),
+          Text(
+            "0",
+            style: Theme.of(context).textTheme.displayLarge,
+          ),
+        ]),
+      ),
     );
   }
 }
