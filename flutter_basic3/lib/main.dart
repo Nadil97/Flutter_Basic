@@ -17,8 +17,9 @@ class App extends StatelessWidget {
 }
 
 class Homepage extends StatelessWidget {
-  const Homepage({Key? key}) : super(key: key);
-
+  // const Homepage({Key? key}) : super(key: key);
+  int count = 0;
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,16 +27,23 @@ class Homepage extends StatelessWidget {
         title: Text("Project 3"),
       ),
       body: Center(
-        child: Column(children: [
+        child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
           Text(
             "You have pushed button time",
             style: TextStyle(fontSize: 25.0),
           ),
           Text(
-            "0",
+            '$count',
             style: Theme.of(context).textTheme.displayLarge,
           ),
         ]),
+      ),
+      floatingActionButton: FloatingActionButton(
+        
+        child: Icon(Icons.add),
+        onPressed: () {
+
+        },
       ),
     );
   }
