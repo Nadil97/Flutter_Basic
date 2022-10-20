@@ -19,7 +19,11 @@ class App extends StatelessWidget {
 class Homepage extends StatelessWidget {
   // const Homepage({Key? key}) : super(key: key);
   int count = 0;
-  
+  void increment() {
+    count = count + 1;
+    print(count);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,11 +43,8 @@ class Homepage extends StatelessWidget {
         ]),
       ),
       floatingActionButton: FloatingActionButton(
-        
         child: Icon(Icons.add),
-        onPressed: () {
-
-        },
+        onPressed: increment,
       ),
     );
   }
