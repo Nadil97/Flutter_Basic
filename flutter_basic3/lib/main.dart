@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,8 +17,14 @@ class App extends StatelessWidget {
   }
 }
 
-class Homepage extends StatelessWidget {
-  // const Homepage({Key? key}) : super(key: key);
+class Homepage extends StatefulWidget {
+  const Homepage({Key? key}) : super(key: key);
+
+  @override
+  State<Homepage> createState() => _HomepageState();
+}
+
+class _HomepageState extends State<Homepage> {
   int count = 0;
   void increment() {
     count = count + 1;
