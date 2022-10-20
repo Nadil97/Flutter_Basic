@@ -54,17 +54,19 @@ class _MyHomePageState extends State<MyHomePage> {
           //     ),
           //   ),
           // ),
-          Column(children: [
+          Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly, 
+            
+          children: [
         Text(
           "Text 1",
           style: TextStyle(fontSize: 20),
         ),
         Text(
-          "Text 1",
+          "Text 2",
           style: TextStyle(fontSize: 20),
         ),
         Text(
-          "Text 1",
+          "Text 3",
           style: TextStyle(fontSize: 20),
         ),
       ]),
