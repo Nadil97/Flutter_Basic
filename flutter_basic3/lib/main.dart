@@ -27,8 +27,10 @@ class Homepage extends StatefulWidget {
 class _HomepageState extends State<Homepage> {
   int count = 0;
   void increment() {
-    count = count + 1;
-    print(count);
+    setState(() {
+      count = count + 1;
+      print(count);
+    });
   }
 
   @override
