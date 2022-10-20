@@ -39,21 +39,35 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text("Flutter project 2"),
       ),
-      body: Container(
-        margin: EdgeInsets.all(20.0),
-        padding: EdgeInsets.all(50.0),
-        height: 200.0,
-        alignment: Alignment.bottomCenter,
-        width: double.infinity,
-        color: Colors.pink,
-        // ignore: prefer_const_constructors
-        child: Text(
-          "Chek colors",
-          style: TextStyle(
-            fontSize: 20.0,
-          ),
+      body: //Container(
+          //   margin: EdgeInsets.all(20.0),
+          //   padding: EdgeInsets.all(50.0),
+          //   height: 200.0,
+          //   alignment: Alignment.bottomCenter,
+          //   width: double.infinity,
+          //   color: Colors.pink,
+          //   // ignore: prefer_const_constructors
+          //   child: Text(
+          //     "Chek colors",
+          //     style: TextStyle(
+          //       fontSize: 20.0,
+          //     ),
+          //   ),
+          // ),
+          Column(children: [
+        Text(
+          "Text 1",
+          style: TextStyle(fontSize: 20),
         ),
-      ),
+        Text(
+          "Text 1",
+          style: TextStyle(fontSize: 20),
+        ),
+        Text(
+          "Text 1",
+          style: TextStyle(fontSize: 20),
+        ),
+      ]),
     );
   }
 }
