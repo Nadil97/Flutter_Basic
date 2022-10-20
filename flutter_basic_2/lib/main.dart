@@ -40,8 +40,9 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text("Flutter project 2"),
       ),
       body: Container(
+        margin: EdgeInsets.all(20.0),
         height: 200.0,
-        width: 200.0,
+        width: double.infinity,
         color: Colors.pink,
         // ignore: prefer_const_constructors
         child: Text(
