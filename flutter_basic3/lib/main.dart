@@ -19,7 +19,7 @@ class App extends StatelessWidget {
         title: 'Flutter navigation',
       ),
       routes: <String, WidgetBuilder>{
-        '/second': (context) => SecondScreen(),
+        '/second': (context) => SecondScreen(''),
       },
     );
   }
