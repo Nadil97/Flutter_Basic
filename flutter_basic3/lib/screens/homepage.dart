@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_basic3/screens/second_screen.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({required this.title}); //: super(key: key);
@@ -25,7 +26,11 @@ class _HomepageState extends State<Homepage> {
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
-        onPressed: () {},
+        onPressed: () {
+          Navigator.of(context).push(MaterialPageRoute(builder: (_) {
+            return SecondScreen();
+          }));
+        },
       ),
     );
   }
