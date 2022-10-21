@@ -12,32 +12,26 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "project 03",
-      home: Homepage(),
+      home: Homepage(
+        title: 'Flutter navigation',
+      ),
     );
   }
 }
 
 class Homepage extends StatefulWidget {
-  const Homepage({Key? key}) : super(key: key);
-
+  const Homepage({required this.title}); //: super(key: key);
+  final String title;
   @override
   State<Homepage> createState() => _HomepageState();
 }
 
 class _HomepageState extends State<Homepage> {
-  int count = 0;
-  void increment() {
-    setState(() {
-      count = count + 1;
-      print(count);
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Project 3"),
+        title: Text(widget.title),
       ),
       body: Center(
         child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
@@ -45,15 +39,11 @@ class _HomepageState extends State<Homepage> {
             "You have pushed button time",
             style: TextStyle(fontSize: 25.0),
           ),
-          Text(
-            '$count',
-            style: Theme.of(context).textTheme.displayLarge,
-          ),
         ]),
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
-        onPressed: increment,
+        onPressed: () {},
       ),
     );
   }
