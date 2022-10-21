@@ -27,8 +27,8 @@ class _HomepageState extends State<Homepage> {
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
         onPressed: () {
-          Navigator.of(context).push(MaterialPageRoute(builder: (_) {
-            return SecondScreen();
+          Navigator.of(context).push(MaterialPageRoute(builder: (_){
+             return SecondScreen();
           }));
         },
       ),
