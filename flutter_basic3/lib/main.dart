@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_basic3/screens/second_screen.dart';
 
 import 'screens/homepage.dart';
 
@@ -17,7 +18,9 @@ class App extends StatelessWidget {
       home: Homepage(
         title: 'Flutter navigation',
       ),
-      
+      routes: <String, WidgetBuilder>{
+        '/second': (context) => SecondScreen(),
+      },
     );
   }
 }
