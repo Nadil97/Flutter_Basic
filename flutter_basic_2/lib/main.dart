@@ -91,25 +91,35 @@ class _MyHomePageState extends State<MyHomePage> {
           //         )
           //       ]),
           // ),
-          ListView(
-        children: <Widget>[
           Container(
-            height: 200,
-            color: Colors.white,
-          ),
-          Container(
-            height: 200,
-            color: Colors.orange,
-          ),
-          Container(
-            height: 200,
-            color: Colors.blueAccent,
-          ),
-          Container(
-            height: 200,
-            color: Colors.greenAccent,
-          ),
-        ],
+        child: ListView(
+          scrollDirection: Axis.vertical,
+          children: <Widget>[
+            ListTile(
+              leading: Icon(Icons.brightness_auto),
+              title: Text("Britness autto"),
+              subtitle: Text("change the Britness"),
+              trailing: Icon(Icons.menu),
+              onTap: (() {}),
+            ),
+            Divider(),
+            ListTile(
+              leading: Icon(Icons.image),
+              title: Text("Change image"),
+              subtitle: Text("change the image"),
+              trailing: Icon(Icons.menu),
+              onTap: (() {}),
+            ),
+            Divider(),
+            ListTile(
+              leading: Icon(Icons.brightness_auto),
+              title: Text("Britness autto"),
+              subtitle: Text("change the Britness"),
+              trailing: Icon(Icons.menu),
+              onTap: (() {}),
+            ),
+          ],
+        ),
       ),
     );
   }
