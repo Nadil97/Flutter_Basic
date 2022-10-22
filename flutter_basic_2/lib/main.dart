@@ -54,42 +54,62 @@ class _MyHomePageState extends State<MyHomePage> {
           //     ),
           //   ),
           // ),
+          //     Container(
+          //   color: Colors.pink,
+          //   width: double.infinity,
+          //   child: Column(
+          //       // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          //       // crossAxisAlignment: CrossAxisAlignment.center,
+          //       children: [
+          //         Text(
+          //           "Text 1",
+          //           style: TextStyle(fontSize: 20),
+          //         ),
+          //         Text(
+          //           "Text 2",
+          //           style: TextStyle(fontSize: 20),
+          //         ),
+          //         Text(
+          //           "Text 3",
+          //           style: TextStyle(fontSize: 20),
+          //         ),
+          //         Row(
+          //           children: [
+          //             Text(
+          //               "Text 1",
+          //               style: TextStyle(fontSize: 20),
+          //             ),
+          //             Text(
+          //               "Text 2",
+          //               style: TextStyle(fontSize: 20),
+          //             ),
+          //             Text(
+          //               "Text 3",
+          //               style: TextStyle(fontSize: 20),
+          //             ),
+          //           ],
+          //         )
+          //       ]),
+          // ),
+          ListView(
+        children: <Widget>[
           Container(
-        color: Colors.pink,
-        width: double.infinity,
-        child: Column(
-            // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            // crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Text(
-                "Text 1",
-                style: TextStyle(fontSize: 20),
-              ),
-              Text(
-                "Text 2",
-                style: TextStyle(fontSize: 20),
-              ),
-              Text(
-                "Text 3",
-                style: TextStyle(fontSize: 20),
-              ),
-              Row(
-                children: [
-                  Text(
-                    "Text 1",
-                    style: TextStyle(fontSize: 20),
-                  ),
-                  Text(
-                    "Text 2",
-                    style: TextStyle(fontSize: 20),
-                  ),
-                  Text(
-                    "Text 3",
-                    style: TextStyle(fontSize: 20),
-                  ),
-                ],
-              )
-            ]),
+            height: 200,
+            color: Colors.white,
+          ),
+          Container(
+            height: 200,
+            color: Colors.orange,
+          ),
+          Container(
+            height: 200,
+            color: Colors.blueAccent,
+          ),
+          Container(
+            height: 200,
+            color: Colors.greenAccent,
+          ),
+        ],
       ),
     );
   }
