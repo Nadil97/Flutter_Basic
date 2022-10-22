@@ -95,13 +95,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: ListView(
           scrollDirection: Axis.vertical,
           children: <Widget>[
-            ListTile(
-              leading: Icon(Icons.brightness_auto),
-              title: Text("Britness autto"),
-              subtitle: Text("change the Britness"),
-              trailing: Icon(Icons.menu),
-              onTap: (() {}),
-            ),
+            
             Divider(),
             ListTile(
               leading: Icon(Icons.image),
