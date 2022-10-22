@@ -22,6 +22,10 @@ class _HomepageState extends State<Homepage> {
             "You have pushed button time",
             style: TextStyle(fontSize: 25.0),
           ),
+          Container(
+            height: 200.0,
+            color: Colors.blueGrey,
+          ),
         ]),
       ),
       floatingActionButton: FloatingActionButton(
